@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CourseForm from './component/CourseForm';
 import CourseList from './component/CourseList';
+import './'
 class App extends Component {
 
   state = {
@@ -60,13 +61,13 @@ class App extends Component {
       return <CourseList detail = {item} key={index} index={index} deleteCourse={this.deleteCourse} editCourse={this.editCourse}/>
     } )
     return (
-      <div>
+      <section className="App">
         <h2>Add Course</h2>
         <CourseForm current = {this.state.current} updateCourse={this.updateCourse} addCourse={this.addCourse}/>
         <ul>
           { courseList }
         </ul>
-      </div>
+      </section>
     );
   }
 }
